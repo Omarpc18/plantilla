@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+{% block content%}
+
+<div class="contairform1">
+    <div class="containerform">
+      <h1>Formulario de Rol</h1>
+      <form action="/agregar" method="POST" id="formRol">
+        <div class="form-group">
+          <label for="codigo_rol">Código del Rol:</label>
+          <input type="number" id="codigo_Rol" name="Codigo_Rol" placeholder="Ingrese el Código del Rol"  required>
+        </div>
+        <div class="form-group">
+          <label for="Nombre_Rol">Nombre del Rol:</label>
+          <input type="text" id="Nombre_Rol" name="Nombre_Rol"  placeholder="Ingrese si es aprendiz o instructor" required>
+        </div>
+        <div class="form-group">
+          <div class="butt1">
+            <button type="submit" class="butt"> Guardar </button>
+          </div>
+          <div class="butt2">
+            <a href="{{ url_for('index')}}" type="button" class="butt3" >Cancelar</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div> 
+  {% endblock%}

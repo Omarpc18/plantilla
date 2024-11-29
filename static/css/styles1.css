@@ -1,0 +1,88 @@
+
+/*Registro de datos(Form)*/
+
+.contairform1{
+    display: flex;
+    justify-content: center;
+}
+/*Contenido del formulario*/
+.containerform {
+    max-width: 600px;
+    margin: 20px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.form-group {
+    margin: 25px;
+    
+}
+label {
+    font-weight: bold;
+    color: #333;
+}
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.butt1, .butt2 {
+    display: inline-block;
+    margin-right: 250px; /* Ajusta este valor de los botones */
+}
+  
+.butt2 {
+    margin-right: 0; /* Elimina el margen derecho del último botón */
+}
+  
+.butt {
+    background-color: #2bbb30;
+    color: rgba(255, 255, 255, 0.774);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.butt:hover {
+    background-color: #549657;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+.butt3 {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  text-decoration: none;
+ }
+
+ .butt3:hover {
+  background-color: #e53935;
+ }
+
+
+/*Formulario editar*/
+.contformedit{
+    max-width: 400px;
+    margin: 20px;
+    background-color: rgb(136, 223, 226);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,155 @@
+
+{% extends "base.html"%}
+{% block content%}
+<style>
+    /* Estilos generales */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .contairform1 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Contenedor del formulario */
+    .containerform {
+        max-width: 600px;
+        margin: 20px;
+        background-color: rgb(42, 78, 196);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #333;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 16px;
+        transition: border 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="date"]:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+
+    .error {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 5px;
+        display: none;
+    }
+
+    .butt {
+        background-color: #2bbb30;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%;
+        transition: background-color 0.3s;
+    }
+
+    .butt:hover {
+        background-color: #549657;
+    }
+
+    .butt3 {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 25px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 10px;
+        width: 100%;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .butt3:hover {
+        background-color: #e53935;
+    }
+
+    /* Espaciado y alineación de los botones */
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2>Formulario de Registro de Usuario</h2>
+    <form method="POST" action="{{ url_for('add_Proyecto') }}">
+        <!-- Selección del Usuario -->
+        <div class="form-group">
+            <label for="ID_Rol">Seleccionar rol:</label>
+            <select class="form-control" id="ID_Rol" name="ID_Rol" required>
+                <option value="">Seleccione un rol</option>
+                {% for rol in roless %}
+                    <option value="{{ rol.ID_Rol }}">{{ rol.Nombre_Rol }} {{ rol.Codigo_Rol }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="Nombre"  placeholder="Ingrese su nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" id="correo" name="Correo"  placeholder="Ingrese su correo" required>
+        </div>
+
+       <div class="form-group">
+          <label for="contrasena">Contraseña:</label>
+          <input type="password" id="contrasena" name="Contrasena"  placeholder="ingrese su contraseña" required>
+       </div>
+
+        <div class="form-group">
+          <label for="fecha_registro">Fecha de Registro:</label>
+          <input type="date" id="fecha_registro" name="Fecha_Registro"  required>
+        </div>
+
+        <!-- Botón para enviar el formulario -->
+        <button type="submit" class="btn btn-primary">Agregar proyecto</button>
+         <!-- Botón para cancelar el formulario -->
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock%}

@@ -1,0 +1,36 @@
+
+{% extends "base.html"%}
+{% block content%}
+<table class="table table-striped"> 
+<thead> 
+  <tr> 
+    <th>ID</th> 
+    <th>Nombre</th> 
+    <th>Correo</th> 
+    <th>Contraseña</th> 
+    <th>Fecha_Registro</th>
+    <th>ID_Rol</th>
+    <th>Acciones</th>
+  </tr> 
+</thead> 
+<tbody> 
+  {% for usuario in roless %} 
+  <tr> 
+    <td>{{usuario['ID_Usuario']}}</td> 
+    <td >{{usuario['Nombre']}}</td> 
+    <td>{{ usuario['Correo']}}</td> 
+    <td>{{usuario['Contrasena']}}</td>
+    <td>{{usuario['Fecha_Registro']}}</td> 
+    <td>{{usuario['ID_Rol']}}</td> 
+
+    <td>
+        <a href="" class="btn btn-warning">Editar</a>
+        <form action="{{ url_for('delete_usuario', ID_Usuario=usuario['ID_Usuario']) }}" method="POST" style="display:inline-block;">
+        </form>
+    </td>
+  </tr>
+  {% endfor %} 
+</tbody> 
+</table> 
+
+{% endblock%}

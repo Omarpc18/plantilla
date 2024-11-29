@@ -1,0 +1,21 @@
+
+{% extends "base.html"%}
+{% block content%}
+<div>
+    <center><h2>Editar los datos del rol</h2></center>
+    <div class="contairform1">
+    <div class="contformedit">
+      <form  method="POST">
+        <div class="form-group">
+          <label for="codigo_rol">Código del Rol:</label>
+          <input type="number" id="codigo_Rol" name="Codigo_Rol" placeholder="Ingrese el Código del Rol" value="{{rol['Codigo_Rol'] }}"  required>
+        </div>
+        <div class="form-group">
+          <label for="Nombre_Rol">Nombre del Rol:</label>
+          <input type="text" id="Nombre_Rol" name="Nombre_Rol"  placeholder="Ingrese si es aprendiz o instructor" value="{{rol['Nombre_Rol'] }}" required>
+        </div>
+        <button type="submit" class="btn btn-success">Actualizar</button>
+      </form>
+    </div>
+    </div>
+{% endblock%}

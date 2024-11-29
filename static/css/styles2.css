@@ -1,0 +1,72 @@
+
+/*Consulta*/
+
+/*Estilo en la tablas*/
+.table-container {
+    max-width: 900px; /* Ajusta el tamaño máximo de la tabla */
+    margin: 0 auto; /* Centra la tabla */
+}
+
+/* Ajustar el ancho de las columnas */
+.table th, .table td {
+    padding: 12px; /* Ajuste del espacio interno de las celdas */
+    text-align: center;
+}
+
+.table th {
+    width: 20%; /* Controlar el ancho de las columnas */
+}
+
+.table td {
+    width: 20%;
+}
+
+/* Añadir un poco de espacio entre las columnas */
+.table td:nth-child(1), .table th:nth-child(1) {
+    width: auto;
+}
+
+.table td:nth-child(2), .table th:nth-child(2) {
+    width: auto;
+}
+
+.table td:nth-child(3), .table th:nth-child(3) {
+    width: auto;
+}
+
+.table td:nth-child(4), .table th:nth-child(4) {
+    width: auto;
+}
+
+/* Estilo para el botón de Editar */
+.btn1 {
+    background-color: #f39c12; 
+    color: white;
+    text-decoration: none;
+    border: 1px solid #e67e22;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.btn1:hover {
+    background-color: #e67e22; 
+    cursor: pointer;
+}
+
+/* Estilo para el botón de Eliminar */
+.btnn {
+    background-color: #e74c3c; 
+    color: white;
+    border: 1px solid #c0392b;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.btnn:hover {
+    background-color: #c0392b; 
+    cursor: pointer;
+}
